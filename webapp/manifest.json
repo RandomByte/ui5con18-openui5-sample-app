@@ -7,7 +7,8 @@
 		"dependencies": {
 			"libs": {
 				"sap.ui.core": {},
-				"sap.m": {}
+				"sap.m": {},
+				"ui5lab.wl.space": {}
 			}
 		},
 		"rootView": {

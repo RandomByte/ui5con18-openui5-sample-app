@@ -15,7 +15,8 @@
   "dependencies": {
     "@openui5/sap.m": "^1.56.2",
     "@openui5/sap.ui.core": "^1.56.2",
-    "@openui5/themelib_sap_belize": "^1.56.2"
+    "@openui5/themelib_sap_belize": "^1.56.2",
+    "ui5lab-wl-space": "github:RandomByte/UI5Lab-library-space#ui5-tooling"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

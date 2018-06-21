@@ -2,8 +2,9 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/model/Filter",
-	"sap/ui/model/FilterOperator"
-], function(Controller, JSONModel, Filter, FilterOperator) {
+	"sap/ui/model/FilterOperator",
+	"ui5lab/wl/space/Intro"
+], function(Controller, JSONModel, Filter, FilterOperator, SpaceIntro) {
 	'use strict';
 
 	return Controller.extend('sap.ui.demo.todo.controller.App', {
@@ -107,6 +108,25 @@ sap.ui.define([
 
 			this._applyListFilters();
 		},
+
+	    onSpaceIntro: function(oEvent) {
+	        var oModel = this.getView().getModel();
+
+	        var aTodos = oModel.getProperty('/todos');
+	        var sList = aTodos.filter(function(oTodo) {
+	            return oTodo.completed !== true;
+	        }).map(function(oTodo, idx) {
+	            return (idx + 1) + ". " + oTodo.title;
+	        }).join("\n");
+
+	        var oSpaceIntro = new SpaceIntro({
+	            intro: "Things you have left to do",
+	            logo: "",
+	            title: "Once upon a time, you added things to your todo list:",
+	            text: sList
+	        });
+	        oSpaceIntro.placeAt("root");
+	    },
 
 		_applyListFilters: function() {
 			var oList = this.byId("todoList");

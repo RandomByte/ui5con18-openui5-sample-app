@@ -42,6 +42,7 @@
 							</SegmentedButton>
 						</contentMiddle>
 						<contentRight>
+							<Button id="spaceIntro" enabled="{= ${/itemsLeftCount} > 0}" icon="sap-icon://favorite" text="{i18n>SPACE_INTRO}" press="onSpaceIntro" />
 							<Button id="clearCompleted" enabled="{/itemsRemovable}" icon="sap-icon://delete" text="{i18n>CLEAR_COMPLETED}" press="clearCompleted" />
 						</contentRight>
 					</Bar>
