@@ -8,3 +8,7 @@
 .todoListInput input:disabled {
 	text-decoration: line-through;
 }
+
+.sw-intro .content-body {
+    white-space: pre-line;
+}
